@@ -4,15 +4,13 @@
 
 This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuet-trios, generated based on the rules given in   [*Table pour composer des Minuets et des Trios &agrave; la infinie*](http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)).
 
-To creat a book, simply [download](https://github.com/justineuro/mdgBookSVG4Kit/archive/master.zip) (or [clone](`git clone https://github.com/justineuro/mdgBookSVG4Kit.git`) this project) to one's computer, unzip the downloaded archive, and at the command line inside the main folder (`mdgBookSVG4Kit-master` directory) issue the following command (pre-requisites: `bash`, `abcmidi`, `abcm2ps`, `Ghostscript`, `Inkscape`, `Maxima`, and `LaTeX`):
+To creat a book, simply [download](https://github.com/justineuro/mdgBookSVG4Kit/archive/main.zip) (or [clone](`git clone https://github.com/justineuro/mdgBookSVG4Kit.git`) this project) to one's computer, unzip the downloaded archive, and at the command line inside the main folder (`mdgBookSVG4Kit-main` directory) issue the following command (pre-requisites: `bash`, `abcmidi`, `abcm2ps`, `Ghostscript`, `Inkscape`, `Maxima`, and `LaTeX`):
 
 ```shell
 bash HOWTO
 ```
 
 Wait for a **few** minutes, i.e., until one gets the bash prompt again.  The compiled book in PDF format (`mdgBookSVG4v1.pdf`), among other things, should be located in the `res` folder (subdirectory).  
-
-(In Termux, use `bash HOWTO-termux` instead).
 
 ## For the Impatient
 To download and examine an example of a book (`mdgBookSVG4v1.pdf`) that was generated in a similar manner, simply right-click (then "Save Link As ...") on the following image:
@@ -36,7 +34,7 @@ pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 ```
 
-Also, line 34 of the `HOWTO` is set by default so that each new book created contains 28 minuets.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-master` directory.
+Also, line 34 of the `HOWTO` is set by default so that each new book created contains 28 minuets.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-main` directory.
 
 
 ## Related Sites
