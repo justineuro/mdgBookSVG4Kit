@@ -24,8 +24,8 @@ To download and examine an example of a book (`mdgBookSVG4v1.pdf`) that was gene
 ## Important Parameters
 To personalize one's generated book (in addition to the randomly generated minuets), one may want to change some of the default parameters/values in the following (all three files are initially found in the main directory but are eventually moved into the `res` folder): 
 
-- `mdgBookSVG4v1.tex` - (main latex file) see lines 35-45; also, one may have to occassionally change the \\topmargin and \\textheight values in lines 267 and 268, to ensure that each audio MIDI file will be on the same page as the corresponding musical score
-- `mdgBookSVG4v1-cover.tex`- makes the cover of the book; see lines 35-45 of `mdgBookSVG4v1.tex` for default values
+- `mdgBookSVG4v1.tex` - (main latex file) see lines 36-46; also, one may have to occassionally change the \\topmargin and \\textheight values in lines 28 and 31, to ensure that each audio MIDI file will be on the same page as the corresponding musical score
+- `mdgBookSVG4v1-cover.tex`- makes the cover of the book; see lines 36-46 of `mdgBookSVG4v1.tex` for default values
 - `hyperref.cfg` - contains the `\hypersetup` keyvalues; one may wish to change the default value of `pdfauthor`, among other keyvalues; see the documentation for the TeX package `hyperref` for more information on these keyvalues.
 
 Once the desired changes have been made to the files above, one can then re-compile the book by issuing, in the `res` subdirectoy, the last set of commmands in the HOWTO file:
@@ -36,7 +36,7 @@ pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 ```
 
-Also, line 32 of the `HOWTO` is set by default so that each new book created contains 28 minuets.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-master` directory.
+Also, line 34 of the `HOWTO` is set by default so that each new book created contains 28 minuets.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-master` directory.
 
 
 ## Related Sites
