@@ -2,7 +2,7 @@
 
 **Here's an opportunity for one to "compose" minuets and to author a Collection Book!!!**
 
-This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuet-trios, generated based on the rules given in   [*Table pour composer des Minuets et des Trios &agrave; la infinie*]({http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)).
+This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuet-trios, generated based on the rules given in   [*Table pour composer des Minuets et des Trios &agrave; la infinie*](http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)).
 
 To creat a book, simply [download](https://github.com/justineuro/mdgBookSVG4Kit/archive/master.zip) (or [clone](`git clone https://github.com/justineuro/mdgBookSVG4Kit.git`) this project) to one's computer, unzip the downloaded archive, and at the command line inside the main folder (`mdgBookSVG4Kit-master` directory) issue the following command (pre-requisites: `bash`, `abcmidi`, `abcm2ps`, `Ghostscript`, `Inkscape`, `Mathematica`, and `LaTeX`):
 
@@ -15,11 +15,11 @@ Wait for a **few** minutes, i.e., until one gets the bash prompt again.  The com
 (In Termux, use `bash HOWTO-termux` instead).
 
 ## For the Impatient
-To download and examine an example of a book (`mdgBookSVG4v1_1.pdf`) that was generated in a similar manner, simply right-click (then "Save Link As ...") on the following image:
+To download and examine an example of a book (`mdgBookSVG4v1.pdf`) that was generated in a similar manner, simply right-click (then "Save Link As ...") on the following image:
 
-[![Front Cover](./mdgBookSVG4v1-tit.jpeg)](https://justineuro.github.io/mdgBookSVGKit/mdgBookSVG4v1.pdf)
+[![Front Cover](./mdgBookSVG4v1-tit.jpeg)](https://github.com/justineuro/mdgBookSVG4Kit/blob/main/mdgBookSVG4v1.pdf)
 
-(**Note**: To enable the MIDI audio links in the book, one should download [mdgBookSVG4v1_1-midi.zip](https://justineuro.github.io/mdgBookSVGKit/mdgBookSVG4v1_1-midi.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
+(**Note**: To enable the MIDI audio links in the book, one should download [mdgBookSVG4v1_1-midi.zip](https://github.com/justineuro/mdgBookSVG4Kit/blob/main/mdgBookSVG4v1_1-midi.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
 
 ## Important Parameters
 To personalize one's generated book (in addition to the randomly generated minuets), one may want to change some of the default parameters/values in the following (all three files are initially found in the main directory but are eventually moved into the `res` folder): 
