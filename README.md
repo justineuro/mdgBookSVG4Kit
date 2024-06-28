@@ -1,6 +1,6 @@
 ## mdgBookSVG4Kit
 
-**Here's an opportunity for one to "compose" minuets and to author a Collection Book!!!**
+**Here's an opportunity for one to "compose" minuet-trios and to author a Collection Book!!!**
 
 This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuet-trios, generated based on the rules given in   [*Table pour composer des Minuets et des Trios &agrave; la infinie*](http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)).
 
@@ -34,7 +34,7 @@ pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 ```
 
-Also, line 34 of the `HOWTO` is set by default so that each new book created contains 28 minuets.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-main` directory.
+Also, line 34 of the `HOWTO` is set by default so that each new book created contains 28 minuet-trios.  One may wish to change this number, as desired, to some other counting number.  This has to be done **before** issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-main` directory.
 
 
 ## Related Sites
