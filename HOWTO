@@ -1,0 +1,100 @@
+#!/bin/bash
+# The `bash HOWTO` command given at the command line within the `mdgBookSVG4Kit-master` directory
+# in your computer will automatically carry out the following steps leading to the creation of the 
+# collection book: `mdgBookSVG4v1.pdf`.
+# 
+# Create three sub-folders: `bin`, `images`, `res`, under the `mdgBookSVG4-master` directory
+#		`bin` - folder for Bash files: mdg42mid+svg.sh, mdg42midRndN-svg.sh, mdgEntriesSVG2.sh
+#		`images` - folder for image files for book cover/title page: 1.png, FrontCover.pdf
+# 	`res` - folder for ABC, SVG, PDF output files; initially contains: 
+#		gf-TAB.pdf - crosstable for two-dice outcome vs. measure number of minuet 
+#		haydnGF-easy-minuet.abc - table of measures for the minuets 
+#		haydnGF-easy-trio.abc - table of measures for the minuets 
+#		hyperref.cfg - file containing the \hypersetup{} keyvalues for the \hyperref pkg
+#		mdg4.bib - bibliography file for the book
+#		mdgBookSVG4v1.tex - main LaTeX file for book 
+#		mdgBookSVG4v1-cover.tex - LaTeX file for cover page
+
+	mkdir bin images res
+	mv *.sh bin
+	mv 1ed.png images; mv FrontCover.pdf images
+	mv gf-TAB.pdf res; mv haydnGF-easy-minuet.abc res; mv haydnGF-easy-trio.abc res
+	mv hyperref.cfg res; mv mdg4.bib res
+	mv *.tex res
+
+# Change directory res folder then, for each  Bash file in `bin`, create a link 
+# from `bib` to `res`
+
+	cd res 
+	ln -s ../bin/*.sh . 
+
+# Within `res` directory, generate nnn MDGs (nnn is number of MDG minuet-trioss in book to be created)
+# For 250 minuets to be generated: nnn=250. Here we generate 28 
+
+	./mdg42midRndN-svg.sh 28
+
+# Generate a list of SVGs created by the previous step:
+
+	ls --color=never gfmt-*.svg > svgList.txt
+
+# Create a list of figure entries for LaTeX file; *.pdf_tex files are also created using inkscape
+
+	./mdgEntriesSVG2.sh svgList.txt
+
+# Change the font sizes of titles, subtitles, repeat signs in each gfmt-*.pdf_tex file
+
+	sed -i 's/\\textbf{gfmt/\\footnotesize \\tt {gfmt/g' gfmt-*.pdf_tex
+	sed -i 's/\\textbf{Perm\./\\footnotesize \\tt {Perm\.\\/' gfmt-*.pdf_tex
+	sed -i 's/\\textbf{= 90/\\footnotesize \\tt {= 90/' gfmt-*.pdf_tex
+	sed -i 's/\[t\]{c}\\textit{3}/\[t\]{c}\\textit{\\scriptsize 3}/g' gfmt-*.pdf_tex
+	sed -i 's/tabular}\[t\]{l}\\textbf{\\textit{tr/tabular}\[t\]{l}\\textbf{\\textit{\\scriptsize tr/g' gfmt-*.pdf_tex
+
+# Move svgList.txt.output to svgList.tex
+
+	cp svgList.txt.output svgList.tex
+
+# Remove trailing `001` from each svgList.tex entry 
+
+	sed -i.OLD 's/001}/}/g' svgList.tex
+	sed -i.OLD 's/001.mid}/.mid}/g' svgList.tex
+
+# Create the abcmdg-k516f.pdf (table of measures) SVGs; aslo *pdf_tex files using inkscape
+
+	abcm2ps -v -O= haydnGF-easy-minuet.abc
+	inkscape -D -z --file=haydnGF-easy-minuet001.svg --export-pdf=haydnGF-easy-minuet001.pdf --export-latex
+	inkscape -D -z --file=haydnGF-easy-minuet002.svg --export-pdf=haydnGF-easy-minuet002.pdf --export-latex
+	inkscape -D -z --file=haydnGF-easy-minuet003.svg --export-pdf=haydnGF-easy-minuet003.pdf --export-latex
+
+	abcm2ps -v -O= haydnGF-easy-trio.abc
+	inkscape -D -z --file=haydnGF-easy-trio001.svg --export-pdf=haydnGF-easy-trio001.pdf --export-latex
+	inkscape -D -z --file=haydnGF-easy-trio002.svg --export-pdf=haydnGF-easy-trio002.pdf --export-latex
+	
+##	add escapes for "_"'s (12x); and \url{---}for URL; change to scriptsize
+
+	sed -i.OLD '/http/s/_/\\_/g' haydnGF-easy-minuet001.pdf_tex
+	sed -i.OLD '/put(0.31773628,1.28500584)/s/\\textit{3}/\\textit{${}$3}/' haydnGF-easy-minuet001.pdf_tex
+	sed -i.OLD 's/\[from http/\\scriptsize\[from \\url{http/g' haydnGF-easy-minuet001.pdf_tex
+	sed -i.OLD 's/Maximilian)\]/Maximilian)}\]/g' haydnGF-easy-minuet001.pdf_tex
+
+	sed -i.OLD '/http/s/_/\\_/g' haydnGF-easy-trio001.pdf_tex
+	sed -i.OLD '/put(0.28950565,1.22414527)/s/\\textit{3}/\\textit{${}$3}/' haydnGF-easy-trio001.pdf_tex
+	sed -i.OLD 's/\[from http/\\scriptsize\[from \\url{http/g' haydnGF-easy-trio001.pdf_tex
+	sed -i.OLD 's/Maximilian)\]/Maximilian)}\]/g' haydnGF-easy-trio001.pdf_tex
+
+##	- add "\scriptsize" before every "tr" and "3-plet" (symbol for trill ornament) 
+##	- change font for measure numbers from italics (it) to typewriter (tt) 
+
+	sed -i.OLD 's/\\textit{tr}/\\textit{\\scriptsize tr}/g' haydnGF-*.pdf_tex 
+	sed -i.OLD 's/\[t\]{c}\\textit{3}/\[t\]{c}\\textit{\\scriptsize 3}/g' haydnGF-*.pdf_tex
+	sed -i.OLD 's/\[t\]{l}\\textit{/\[t\]{c}\\texttt{\\footnotesize /g' haydnGF-*.pdf_tex
+
+# Generate the PDF
+
+	pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
+	bibtex mdgBookSVG4v1.aux
+	pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
+	pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
+
+###
+##
+#
