@@ -58,7 +58,8 @@
 	sed -i.OLD 's/001}/}/g' svgList.tex
 	sed -i.OLD 's/001.mid}/.mid}/g' svgList.tex
 
-# Create the abcmdg-k516f.pdf (table of measures) SVGs; aslo *pdf_tex files using inkscape
+# Create SVGs for the haydnGF-easy-minuet.pdf/haydn-easy-trio.pdf (tables of measures); 
+# also corresponding *pdf_tex files using inkscape
 
 	abcm2ps -v -O= haydnGF-easy-minuet.abc
 	inkscape -D -z --file=haydnGF-easy-minuet001.svg --export-pdf=haydnGF-easy-minuet001.pdf --export-latex
