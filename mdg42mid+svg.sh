@@ -203,7 +203,7 @@ EOF
 dbNum=`cat /tmp/001.txt`
 
 # restore original toss values
-diceS[7]=$8; diceS[15]=$16; 
+diceS[7]=$8; diceS[15]=$16; diceS[23]=$24; diceS[31]=$32 
 
 #----------------------------------------------------------------------------------
 # calculate the measure numbers for the current dice tosses; 
