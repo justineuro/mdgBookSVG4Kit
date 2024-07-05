@@ -36,6 +36,11 @@ pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG4v1.tex
 
 Also, line 34 of the `HOWTO` is set by default so that each new book created contains 28 minuet-trios.  One may wish to change this number, as desired, to some other counting number.  This has to be done **before** issuing the `bash HOWTO` command within the `mdgBookSVG4Kit-main` directory.
 
+## Similar Kits on GitHub
+MDG Book kits similar to this may be found on related GitHub sites such as:
+
+- [mdgBookSVGKit](https://github.com/justineuro/mdgBookSVGKit) - MDG based on [*Musikalisches W&uuml;rferspiel, K. 516f*](http://imslp.org/wiki/Musikalische\s_W\%C3\%BCrfelspiel,\_K.516f\_%28Mozart,\_Wolfgang\_Amadeus\%29), attributed to Wolfgang Amadeus Mozart
+- [mdgBookSVG4itKit](https://github.com/justineuro/mdgBookSVG4iKit) - MDG based on [*Gioco Filarmonico o sia maniera facile per comporre un infinito numero di menuetti e trio, anche senza sapere il contrapunto*](http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)); similar to  [mdgBookSVG4Kit](https://github.com/justineuro/mdgBookSVG4Kit) but arranged for three (3) instruments
 
 ## Related Sites
 - [Opus Infinity](https://opus-infinity.org/) - Collaborative work of Robbert Harms, Hein Moors, and Suus van Petegem whose goal is to unravel the mystery behind the tables used for generating MDGs.  Site visitors can generate MDGs based on works of Kirnberger, Mozart, Stadler/Haydn, Bach, and Gerlach.  Corresponding audio files (<tt>mid</tt>, <tt>ogg</tt>, and/or <tt>mp3</tt>) and image files (<tt>pdf</tt> or <tt>png</tt>) are also made available for listening, viewing, or downloading.
