@@ -15,7 +15,7 @@ Wait for a **few** minutes, i.e., until one gets the bash prompt again.  The com
 ## For the Impatient
 To download and examine an example of a book (`mdgBookSVG4v1.pdf`) that was generated in a similar manner, simply right-click (then "Save Link As ...") on the following image:
 
-[![Front Cover](./mdgBookSVG4v1-tit.jpeg)](https://raw.githubusercontent.com/justineuro/mdgBookSVG4Kit/main/mdgBookSVG4v1.pdf)
+[![Front Cover](https://raw.githubusercontent.com/justineuro/mdgBookSVG4Kit/main/mdgBookSVG4v1-tit.jpeg)](https://raw.githubusercontent.com/justineuro/mdgBookSVG4Kit/main/mdgBookSVG4v1.pdf)
 
 (**Note**: To enable the MIDI audio links in the book, one should download [mdgBookSVG4v1_1-midi.zip](https://github.com/justineuro/mdgBookSVG4Kit/raw/main/mdgBookSVG4v1_1-midi.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
 
@@ -39,7 +39,8 @@ Also, line 34 of the `HOWTO` is set by default so that each new book created con
 ## Similar Kits on GitHub
 MDG Book kits similar to this may be found on related GitHub sites such as:
 
-- [mdgBookSVGKit](https://github.com/justineuro/mdgBookSVGKit) - MDG based on [*Musikalisches W&uuml;rferspiel, K. 516f*](http://imslp.org/wiki/Musikalische\s_W\%C3\%BCrfelspiel,\_K.516f\_%28Mozart,\_Wolfgang\_Amadeus\%29), attributed to Wolfgang Amadeus Mozart
+- [mdgBookSVGKit](https://github.com/justineuro/mdgBookSVGKit) - MDG based on [*Musikalisches W&uuml;rferspiel, K. 516f*](http://imslp.org/wiki/Musikalisches_W%C3%BCrfelspiel,_K.516f_%28Mozart,_Wolfgang_Amadeus%29), attributed to Wolfgang Amadeus Mozart
+- [mdgBookSVG3Kit](https://justineuro.github.io/mdgBookSVG3Kit) - One-Command Kit for Creating MDG (Kirnberger) Minuet-Trios Collection Book, the minuet-trios are generated based on the rules given in [*Der allezeit fertige Polonoisen- und Menuettencomponist* (*1757*)](https://imslp.org/wiki/Der_allezeit_fertige_Polonoisen-_und_Menuettencomponist_(Kirnberger%2C_Johann_Philipp)) 
 - [mdgBookSVG4itKit](https://github.com/justineuro/mdgBookSVG4itKit) - MDG based on [*Gioco Filarmonico o sia maniera facile per comporre un infinito numero di menuetti e trio, anche senza sapere il contrapunto*](http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)); similar to  [mdgBookSVG4Kit](https://github.com/justineuro/mdgBookSVG4Kit) but arranged for three (3) instruments
 
 ## Related Sites
