@@ -62,13 +62,13 @@
 # also corresponding *pdf_tex files using inkscape
 
 	abcm2ps -v -O= haydnGF-easy-minuet.abc
-	inkscape -D -z --file=haydnGF-easy-minuet001.svg --export-pdf=haydnGF-easy-minuet001.pdf --export-latex
-	inkscape -D -z --file=haydnGF-easy-minuet002.svg --export-pdf=haydnGF-easy-minuet002.pdf --export-latex
-	inkscape -D -z --file=haydnGF-easy-minuet003.svg --export-pdf=haydnGF-easy-minuet003.pdf --export-latex
+	inkscape --export-filename=haydnGF-easy-minuet001.pdf --export-area-drawing --export-latex haydnGF-easy-minuet001.svg
+	inkscape --export-filename=haydnGF-easy-minuet002.pdf --export-area-drawing --export-latex haydnGF-easy-minuet002.svg
+	inkscape --export-filename=haydnGF-easy-minuet003.pdf --export-area-drawing --export-latex haydnGF-easy-minuet003.svg
 
 	abcm2ps -v -O= haydnGF-easy-trio.abc
-	inkscape -D -z --file=haydnGF-easy-trio001.svg --export-pdf=haydnGF-easy-trio001.pdf --export-latex
-	inkscape -D -z --file=haydnGF-easy-trio002.svg --export-pdf=haydnGF-easy-trio002.pdf --export-latex
+	inkscape --export-filename=haydnGF-easy-trio001.pdf --export-area-drawing --export-latex haydnGF-easy-trio001.svg
+	inkscape --export-filename=haydnGF-easy-trio002.pdf --export-area-drawing --export-latex haydnGF-easy-trio002.svg
 	
 ##	add escapes for "_"'s (12x); and \url{---}for URL; change to scriptsize
 
