@@ -28,7 +28,7 @@
 	cd res 
 	ln -s ../bin/*.sh . 
 
-# Within `res` directory, generate nnn MDGs (nnn is number of MDG minuet-trioss in book to be created)
+# Within `res` directory, generate nnn MDGs (nnn is number of MDG minuet-trios in book to be created)
 # For 250 minuets to be generated: nnn=250. Here we generate 28 
 
 	./mdg42midRndN-svg.sh 28
