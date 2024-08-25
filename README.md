@@ -15,7 +15,7 @@ Wait for a **few** minutes, i.e., until one gets the bash prompt again.  The com
 ## For the Impatient
 To download and examine an example of a book (`mdgBookSVG4v1.pdf`) that was generated in a similar manner, simply right-click (then "Save Link As ...") on the following image:
 
-[![Front Cover](./mdgBookSVG4v1-tit.jpeg)](https://raw.githubusercontent.com/justineuro/mdgBookSVG4Kit/main/mdgBookSVG4v1.pdf)
+[![Front Cover](./mdgBookSVG4v1-tit.png)](https://raw.githubusercontent.com/justineuro/mdgBookSVG4Kit/main/mdgBookSVG4v1.pdf)
 
 (**Note**: To enable the MIDI audio links in the book, one should download [mdgBookSVG4v1_1-midi.zip](https://github.com/justineuro/mdgBookSVG4Kit/raw/main/mdgBookSVG4v1_1-midi.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
 
