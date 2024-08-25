@@ -51,6 +51,7 @@ do
 	\input{${ifile/.svg}.pdf_tex}
 \end{figure}
 \nopagebreak[4]
+\vspace{-0.25in}
 {\footnotesize For audio (midi): \hyperref{./${ifile/.svg/}.mid}{}{}{${ifile/.svg/}.mid}}
 "
 done < $svgfiles
